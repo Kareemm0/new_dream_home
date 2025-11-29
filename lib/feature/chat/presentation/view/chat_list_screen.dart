@@ -47,7 +47,7 @@ class _ChatListScreenState extends State<ChatListScreen> {
     }
     return BlocProvider(
       create: (context) =>
-          ChatCubit(getIt())..getAllChats(userid: _user!.user!.id!),
+          ChatCubit(getIt())..getAllChats(userid: _user!.user?.id ?? ""),
       child: BlocBuilder<ChatCubit, ChatState>(
         builder: (context, state) {
           final cubit = context.read<ChatCubit>();

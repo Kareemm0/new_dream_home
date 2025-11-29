@@ -8,9 +8,9 @@ class User extends Equatable {
   final String? role;
   final dynamic job;
   final dynamic images;
-  final double? rate;
+  final num? rate;
   final String? contactNumber;
-  final int? v;
+  final num? v;
 
   const User({
     this.id,
@@ -33,9 +33,9 @@ class User extends Equatable {
         role: json['role'] as String?,
         job: json['job'] as dynamic,
         images: json['images'] as dynamic,
-        rate: json['rate'] as double?,
+        rate: json['rate'] as num?,
         contactNumber: json['contactNumber'] as String?,
-        v: json['__v'] as int?,
+        v: json['__v'] as num?,
       );
 
   Map<String, dynamic> toJson() => {

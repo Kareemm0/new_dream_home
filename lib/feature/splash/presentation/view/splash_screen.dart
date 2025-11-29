@@ -55,7 +55,7 @@ class _SplashScreenState extends State<SplashScreen> {
     bool onboardingShown = await OnboardingService().isOnboardingShown();
 
     if (onboardingShown) {
-      if (_user?.user!.id! == null) {
+      if (_user?.user?.id! == null) {
         context.pushReplacement(Routes.login);
       } else {
         _user!.user!.role == 'employee'
